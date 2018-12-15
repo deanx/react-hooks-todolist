@@ -19,7 +19,10 @@ const App = () => {
           setTodos([...todos, trimmedText]);
         }
       }}/>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={todoIndex => {
+      const newTodos = todos.filter((_, index) => index !== todoIndex);
+      setTodos(newTodos);
+      }} />
     </div>
   );
 };
