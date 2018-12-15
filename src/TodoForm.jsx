@@ -7,6 +7,7 @@ const TodoForm = ({ saveTodo }) => {
       onSubmit={event => {
         event.preventDefault();
         saveTodo(value);
+        setValue('');
         }}
         >
        <TextField variant = "outlined"
